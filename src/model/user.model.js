@@ -23,3 +23,12 @@ exports.update = (id, data) =>{
     }
     return users[index]
 }
+
+exports.remove = (id) =>{
+    const index = user.findIndex(u => u.id === id)
+    if(index === -1) return null
+
+    users.splice(index, 1)
+
+    return true
+}

@@ -32,3 +32,14 @@ exports.update = (req, res) =>{
     res.status(202).json(updated)
 }
 
+exports.remove = (req, res) =>{
+    const id = Number (req.params.id)
+
+    const removed = User.remove(id)
+
+    if(!removed) return 
+
+    res.status(404).json({message: "User removed with sucess"})
+}
+
+
