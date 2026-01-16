@@ -5,6 +5,8 @@ exports.findAll = () =>{
     return users
 }
 
+exports.findByld = (id) => users.find(u => u.id === id)
+
 exports.create = (data) =>{
     const user = { id: id++, ...data }
     users.push(user)
