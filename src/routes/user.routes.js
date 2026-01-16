@@ -6,6 +6,7 @@ const router = express.Router()
 router.get('/', UserController.list)
 router.get('/:id', UserController.getByld)
 router.post('/', UserController.create)
+router.put('/:id', UserController.update)
  
  
 module.exports = router
