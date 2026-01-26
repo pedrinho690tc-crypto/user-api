@@ -4,8 +4,9 @@ const UserController = require('../controller/user.controller')
 const router = express.Router()
  
 router.get('/', UserController.list)
-router.get('/:id', UserController.getByld)
+router.get('/new', UserController.createView)
 router.post('/', UserController.create)
+router.get('/:id/edit', UserController.edit)
 router.put('/:id', UserController.update)
 router.delete('/:id', UserController.remove)
  
